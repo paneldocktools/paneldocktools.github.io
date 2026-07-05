@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SFX Panel Pro — One-Click Sound Effects for Premiere Pro</title>
+<meta name="description" content="SFX Panel Pro places your favorite sound effects on the Premiere Pro timeline in one click — with volume, frame offset, and trim applied automatically.">
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+  :root { --bg:#16181d; --card:#1f2229; --text:#e8e8e8; --sub:#9aa0aa; --blue:#2377e8; --border:#2c3038; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:"Segoe UI",system-ui,-apple-system,sans-serif; line-height:1.7; }
+  .wrap { max-width:820px; margin:0 auto; padding:0 24px 80px; }
+  nav { display:flex; gap:20px; align-items:center; padding:18px 0; border-bottom:1px solid var(--border); margin-bottom:48px; }
+  nav img { width:28px; height:28px; border-radius:6px; }
+  nav a { color:var(--sub); text-decoration:none; font-size:14px; }
+  nav a:hover, nav a.on { color:var(--text); }
+  nav .brand { color:var(--text); font-weight:600; font-size:15px; margin-right:auto; display:flex; gap:10px; align-items:center; }
+  .hero { text-align:center; padding:24px 0 40px; }
+  .hero img { width:96px; height:96px; border-radius:22px; margin-bottom:20px; }
+  h1 { font-size:40px; line-height:1.2; margin-bottom:14px; }
+  .tagline { color:var(--sub); font-size:19px; margin-bottom:28px; }
+  .btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:12px 26px; border-radius:8px; text-decoration:none; font-weight:600; font-size:15px; }
+  .btn.primary { background:var(--blue); color:#fff; }
+  .btn.ghost { border:1px solid var(--border); color:var(--text); }
+  h2 { font-size:24px; margin:56px 0 18px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+  h3 { font-size:17px; margin:26px 0 8px; }
+  p { margin-bottom:12px; }
+  ul, ol { margin:0 0 14px 22px; }
+  li { margin-bottom:6px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:20px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px 20px; }
+  .card b { display:block; margin-bottom:6px; color:#fff; }
+  .card span { color:var(--sub); font-size:14px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin:14px 0; }
+  th, td { padding:8px 12px; border:1px solid var(--border); text-align:left; }
+  th { background:var(--card); }
+  td.c { text-align:center; }
+  .faq p { color:var(--sub); }
+  .faq h3 { color:var(--text); }
+  footer { margin-top:70px; padding-top:24px; border-top:1px solid var(--border); color:var(--sub); font-size:14px; }
+  footer a { color:var(--blue); text-decoration:none; }
+  code { background:var(--card); padding:2px 7px; border-radius:5px; font-size:0.9em; }
+  @media (max-width:640px){ .grid{grid-template-columns:1fr;} h1{font-size:30px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <span class="brand"><img src="icon.png" alt="">SFX Panel Pro</span>
+    <a href="index.html" class="on">Help</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+
+  <div class="hero">
+    <img src="icon.png" alt="SFX Panel Pro icon">
+    <h1>One-click sound effects<br>for Premiere Pro</h1>
+    <p class="tagline">Register your go-to SFX once. Place them on the timeline instantly —<br>with volume, frame offset, and trim applied automatically.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://booth.pm/ja/items/8527370">Get SFX Panel Pro</a>
+      <a class="btn ghost" href="https://youtu.be/NMEeOzBZh9E">▶ Watch the 30s demo</a>
+    </div>
+  </div>
+
+  <h2>Features</h2>
+  <div class="grid">
+    <div class="card"><b>One-click placement</b><span>Drop any registered SFX at the playhead — volume (dB) and frame offset applied automatically.</span></div>
+    <div class="card"><b>Batch placement</b><span>Place an SFX at the start of every selected clip, or on every clip of a chosen video track. One click, one undo.</span></div>
+    <div class="card"><b>Trim import</b><span>Trim an SFX once on the timeline and import its In/Out points — it lands pre-trimmed from then on.</span></div>
+    <div class="card"><b>Smart occupancy handling</b><span>When the target track is busy: warn, use an empty track below, or overwrite — based on the clip's real duration.</span></div>
+    <div class="card"><b>Stay organized</b><span>Tabs per show × custom categories, ★ favorites pinned to top, usage-based sorting, drag &amp; drop reordering, filter box.</span></div>
+    <div class="card"><b>Preview &amp; volume sync</b><span>Audition SFX in the panel without touching the Source Monitor. Import a timeline clip's volume back into its preset.</span></div>
+    <div class="card"><b>Team sharing (Pro)</b><span>Export / import your whole setup and relink your SFX folder by filename — nothing breaks across machines.</span></div>
+    <div class="card"><b>Private by design</b><span>Everything stays on your computer. No account, no telemetry, no network access.</span></div>
+  </div>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Adobe Premiere Pro <b>25.6 or later</b> (2025 / 2026)</li>
+    <li>Windows / macOS (pure UXP plugin — no native code)</li>
+    <li>Adobe Creative Cloud desktop app (latest recommended)</li>
+    <li>UI language: English / 日本語 (auto-detected, switchable)</li>
+  </ul>
+
+  <h2>Installation</h2>
+  <ol>
+    <li>Unzip the download and locate the <code>.ccx</code> file.</li>
+    <li><b>Double-click</b> the <code>.ccx</code>. The Creative Cloud desktop app opens and asks you to confirm.</li>
+    <li>A warning about a plugin from outside Adobe's Marketplace is <b>expected for self-distributed plugins</b> — proceed.</li>
+    <li><b>Restart</b> Premiere Pro, then open <b>Window &gt; UXP Plugins &gt; SFX Panel Pro</b>.</li>
+  </ol>
+  <p>To uninstall, use <b>Manage plugins</b> in the Creative Cloud desktop app.</p>
+
+  <h2>Pro vs. Lite</h2>
+  <table>
+    <tr><th>Feature</th><th>Lite (free)</th><th>Pro</th></tr>
+    <tr><td>Registered SFX</td><td class="c">up to 3</td><td class="c">Unlimited</td></tr>
+    <tr><td>Tabs (sets) / Categories</td><td class="c">2 / 2</td><td class="c">Unlimited</td></tr>
+    <tr><td>Place at playhead · volume · offset · trim</td><td class="c">✓</td><td class="c">✓</td></tr>
+    <tr><td>Batch place at selected clips</td><td class="c">up to 3 clips</td><td class="c">Unlimited</td></tr>
+    <tr><td>V-track batch placement</td><td class="c">—</td><td class="c">✓</td></tr>
+    <tr><td>Export / import settings · relink SFX folder</td><td class="c">—</td><td class="c">✓</td></tr>
+  </table>
+
+  <h2>FAQ</h2>
+  <div class="faq">
+    <h3>Does the panel collect any data?</h3>
+    <p>No. Everything is stored locally. No account, no analytics, no network access.</p>
+    <h3>Can placed SFX play back automatically?</h3>
+    <p>No — Premiere's UXP API does not expose Program Monitor playback, so this is not possible in any UXP panel.</p>
+    <h3>Can I assign keyboard shortcuts to SFX buttons?</h3>
+    <p>No — Premiere does not allow key assignments for UXP panel commands. This is an Adobe platform limitation.</p>
+    <h3>Which audio formats are supported?</h3>
+    <p>mp3, wav, m4a, aif, aiff. (AIFF previews via the Source Monitor due to a Premiere webview limitation.)</p>
+    <h3>(macOS) An SFX registers fine but fails to place with a "file could not be read" error.</h3>
+    <p>This can happen with non-ASCII (e.g. Japanese) file names copied from Windows to macOS (Unicode NFC/NFD difference). Rename the files to plain alphanumeric names (e.g. <code>sfx_001.wav</code>) and re-register them.</p>
+    <h3>I get a warning when double-clicking the .ccx.</h3>
+    <p>That warning appears for any plugin installed from outside Adobe's Marketplace — it is safe to proceed.</p>
+  </div>
+
+  <h2>Support</h2>
+  <p>Email: <a href="mailto:paneldocktools.contact@gmail.com" style="color:var(--blue)">paneldocktools.contact@gmail.com</a><br>
+  <span style="color:var(--sub)">Please include your Premiere Pro version, OS, panel edition (Pro/Lite) and version, and what you were doing when the problem occurred. Support is available in English and Japanese / サポートは日本語でも対応しています。</span></p>
+
+  <footer>
+    © 2026 Panel Dock Tools · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a>
+  </footer>
+</div>
+</body>
+</html>
