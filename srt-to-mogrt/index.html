@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRT to MOGRT — Bulk Motion Graphics Captions for Premiere Pro</title>
+<meta name="description" content="SRT to MOGRT turns a subtitle file into styled captions on your timeline. One Motion Graphics template per cue — text filled in, line breaks handled, timing exact.">
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+  :root { --bg:#16181d; --card:#1f2229; --text:#e8e8e8; --sub:#9aa0aa; --blue:#2377e8; --border:#2c3038; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:"Segoe UI",system-ui,-apple-system,sans-serif; line-height:1.7; }
+  .wrap { max-width:820px; margin:0 auto; padding:0 24px 80px; }
+  nav { display:flex; gap:20px; align-items:center; padding:18px 0; border-bottom:1px solid var(--border); margin-bottom:48px; }
+  nav img { width:28px; height:28px; border-radius:6px; }
+  nav a { color:var(--sub); text-decoration:none; font-size:14px; }
+  nav a:hover, nav a.on { color:var(--text); }
+  nav .brand { color:var(--text); font-weight:600; font-size:15px; margin-right:auto; display:flex; gap:10px; align-items:center; }
+  .hero { text-align:center; padding:24px 0 40px; }
+  .hero img { width:96px; height:96px; border-radius:22px; margin-bottom:20px; }
+  h1 { font-size:40px; line-height:1.2; margin-bottom:14px; }
+  .tagline { color:var(--sub); font-size:19px; margin-bottom:28px; }
+  .btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:12px 26px; border-radius:8px; text-decoration:none; font-weight:600; font-size:15px; }
+  .btn.primary { background:var(--blue); color:#fff; }
+  .btn.ghost { border:1px solid var(--border); color:var(--text); }
+  h2 { font-size:24px; margin:56px 0 18px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+  h3 { font-size:17px; margin:26px 0 8px; }
+  p { margin-bottom:12px; }
+  ul, ol { margin:0 0 14px 22px; }
+  li { margin-bottom:6px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:20px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px 20px; }
+  .card b { display:block; margin-bottom:6px; color:#fff; }
+  .card span { color:var(--sub); font-size:14px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin:14px 0; }
+  th, td { padding:8px 12px; border:1px solid var(--border); text-align:left; }
+  th { background:var(--card); }
+  td.c { text-align:center; }
+  .faq p { color:var(--sub); }
+  .faq h3 { color:var(--text); }
+  footer { margin-top:70px; padding-top:24px; border-top:1px solid var(--border); color:var(--sub); font-size:14px; }
+  footer a { color:var(--blue); text-decoration:none; }
+  code { background:var(--card); padding:2px 7px; border-radius:5px; font-size:0.9em; }
+  @media (max-width:640px){ .grid{grid-template-columns:1fr;} h1{font-size:30px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <span class="brand"><img src="icon.png" alt="">SRT to MOGRT</span>
+    <a href="index.html" class="on">Help</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+
+  <div class="hero">
+    <img src="icon.png" alt="SRT to MOGRT icon">
+    <h1>Bulk motion graphics captions<br>for Premiere Pro</h1>
+    <p class="tagline">Load an SRT, pick a Motion Graphics template, and every cue lands on the timeline —<br>text filled in, line breaks handled, timing exact to the frame.</p>
+    <!-- TODO(okumo): ストアURL確定後にCTAを差し込む。候補: BOOTH / aescripts / Adobe Marketplace / YouTubeデモ
+    <div class="btns">
+      <a class="btn primary" href="">Get SRT to MOGRT Pro</a>
+      <a class="btn ghost" href="">▶ Watch the demo</a>
+    </div>
+    -->
+  </div>
+
+  <h2>Features</h2>
+  <div class="grid">
+    <div class="card"><b>One template per cue</b><span>Every subtitle in your SRT becomes a styled caption on the timeline, with its text already filled in and its duration matched to the cue.</span></div>
+    <div class="card"><b>Premiere Pro templates work</b><span>Motion Graphics templates authored in Premiere Pro are not writable through the standard scripting interface. This panel rewrites their text directly, so they just work — alongside templates built in After Effects.</span></div>
+    <div class="card"><b>Line breaks you control</b><span>Set max characters per line and max lines, and every caption re-wraps to fit your design instead of overflowing the box. Full-width = 1, half-width = 0.5.</span></div>
+    <div class="card"><b>MOGRT library</b><span>Register the templates you use often and pick them from thumbnails with looping video previews.</span></div>
+    <div class="card"><b>Choose the target text</b><span>For templates with several text fields, select exactly which one receives the caption — labels and other controls stay untouched.</span></div>
+    <div class="card"><b>Preview before you commit</b><span>Check the count, duration, wrapped result, and warnings first. Preview never modifies your sequence.</span></div>
+    <div class="card"><b>Automatic backup</b><span>Your sequence is duplicated before anything is placed (on by default). Re-applying to the same track replaces old captions cleanly.</span></div>
+    <div class="card"><b>Private by design</b><span>Everything stays on your computer. No account, no telemetry, no network access.</span></div>
+  </div>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Adobe Premiere Pro <b>25.6.6 or later</b></li>
+    <li>Windows / macOS — tested with Premiere Pro 25.6.6 and 2026 on both</li>
+    <li>The target template must have text that is editable in the Essential Graphics panel (After Effects and Premiere Pro templates are both supported)</li>
+    <li>UI language: English / 日本語 (auto-detected, switchable)</li>
+  </ul>
+
+  <h2>Installation</h2>
+  <ol>
+    <li>Unzip the download and locate the <code>.zxp</code> file.</li>
+    <li>Install it with <b>ZXP/UXP Installer</b> (a free tool — search for "ZXP Installer") by dragging the <code>.zxp</code> onto it.</li>
+    <li>An "unknown publisher" warning is <b>expected</b> — this product is distributed as a self-signed ZXP. Only install ZXP files obtained from the official distributor.</li>
+    <li><b>Restart</b> Premiere Pro, then open <b>Window &gt; Extensions &gt; SRT to MOGRT</b>.</li>
+  </ol>
+
+  <h2>Basic usage</h2>
+  <ol>
+    <li><b>1. Load SRT</b> — click "Select SRT file…". The cue count and the first five cues are shown. UTF-8 (with or without BOM) and Shift_JIS (CP932) are auto-detected.</li>
+    <li><b>2. MOGRT template &amp; settings</b> — add your templates to the library and pick one. Then set the target text, target video track, max characters per line, and max lines.</li>
+    <li><b>3. Preview → Apply</b> — click Preview to check the count, wrapped result, and warnings. If it looks right, click Apply and every cue is placed at once.</li>
+  </ol>
+
+  <h2>Pro vs. Preflight</h2>
+  <p>Preflight is a free companion that checks whether your own template works in your own environment <b>before</b> you buy. It runs the real placement engine — not a mock-up — on three fixed test captions.</p>
+  <table>
+    <tr><th>Feature</th><th>Preflight (free)</th><th>Pro</th></tr>
+    <tr><td>Load your own SRT</td><td class="c">—</td><td class="c">✓ Any SRT, any length</td></tr>
+    <tr><td>Captions placed</td><td class="c">3 (fixed sample)</td><td class="c">Unlimited</td></tr>
+    <tr><td>Real text rewriting</td><td class="c">✓</td><td class="c">✓</td></tr>
+    <tr><td>After Effects / Premiere Pro templates</td><td class="c">✓</td><td class="c">✓</td></tr>
+    <tr><td>Compatibility check &amp; diagnosis</td><td class="c">✓</td><td class="c">✓</td></tr>
+    <tr><td>MOGRT library with previews</td><td class="c">—</td><td class="c">✓</td></tr>
+    <tr><td>Line-break control</td><td class="c">—</td><td class="c">✓</td></tr>
+    <tr><td>Target text / target track selection</td><td class="c">—</td><td class="c">✓</td></tr>
+    <tr><td>Backup before applying</td><td class="c">—</td><td class="c">✓</td></tr>
+  </table>
+
+  <h2>FAQ</h2>
+  <div class="faq">
+    <h3>Does it work with templates made in Premiere Pro?</h3>
+    <p>Yes. Both After Effects and Premiere Pro templates are supported, as long as the target text is editable in Essential Graphics. Support for templates authored in Premiere Pro is the main thing that sets this panel apart — the standard scripting interface cannot write to them at all.</p>
+
+    <h3>My template fails to place, with an "Unknown error exception".</h3>
+    <p>This almost always means the template was exported from a <b>newer version of Premiere Pro</b> than the one you are running. A Motion Graphics template carries a project file inside it, and Premiere Pro cannot open a project newer than itself — so the template cannot be placed. This is a limitation of the application, not of this panel. The panel detects this and says so in the log. Re-export the template from the version you are editing in, or use a template built in that version.</p>
+
+    <h3>Can I undo a placement with Ctrl+Z?</h3>
+    <p>No. This panel cannot undo placement — a limitation of the CEP extension platform. Keep the automatic backup option <b>ON</b> (it is on by default) and restore the backup sequence that was created if you need to go back.</p>
+
+    <h3>Does it work on macOS?</h3>
+    <p>Yes. Windows and macOS are both supported and have been tested with Premiere Pro 25.6.6 and 2026.</p>
+
+    <h3>Some captions were not placed after applying.</h3>
+    <p>An automatic check after placement detects and re-places missed cues. Confirm that the count in the completion message matches your timeline.</p>
+
+    <h3>Some characters show as "□".</h3>
+    <p>The font used by your template has no glyph for those characters (this often happens with emoji). Choose a font that covers them.</p>
+
+    <h3>Does the panel collect any data?</h3>
+    <p>No. Everything is stored locally. No account, no analytics, no network access.</p>
+
+    <h3>Can I switch the interface language?</h3>
+    <p>Yes — use the button at the top right of the panel to switch between English and 日本語. Your choice is saved.</p>
+
+    <h3>I get an "unknown publisher" warning when installing.</h3>
+    <p>Expected — the product is distributed as a self-signed ZXP. Only install ZXP files obtained from the official distributor.</p>
+  </div>
+
+  <h2>Support</h2>
+  <p>Email: <a href="mailto:paneldocktools.contact@gmail.com" style="color:var(--blue)">paneldocktools.contact@gmail.com</a><br>
+  <span style="color:var(--sub)">Please include your Premiere Pro version, OS, edition (Pro / Preflight) and version, and what you were doing when the problem occurred. If a template failed to place, telling us which version of Premiere Pro exported it helps a lot. Support is available in English and Japanese / サポートは日本語でも対応しています。</span></p>
+
+  <footer>
+    © 2026 Panel Dock Tools · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a>
+  </footer>
+</div>
+</body>
+</html>
